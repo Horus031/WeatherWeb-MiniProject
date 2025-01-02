@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="title-wrapper">
+            <h1 class="title">Weather App</h1>
+        </header>
+        <div class="weather-frame">
+            <div class="tab1">
+                <div class="search-wrapper">
+                    <input type="text" name="" id="search-input" placeholder="Search for a city">
+                    <span class="search-icon">
+                        <box-icon name='search-alt-2'></box-icon>
+                    </span>
+                </div>
+                <div class="desc-wrapper">
+                    <img src="/assets/greeting-img.png" alt="" class="img">
+                    <p class="desc">How's the weather in your country ?</p>
+                </div>
+            </div>
+
+            <div class="tab2">
+                <header class="country-info">
+                    <div class="name-wrapper">
+                        <span class="back-icon">
+                            <box-icon name='chevron-left' type='solid' size="lg"></box-icon>
+                        </span>
+                        <h1 class="country-name">London</h1>
+                    </div>
+                    <div class="time-wrapper">
+                        <h2>Jan 2, 03:34pm</h2>
+                    </div>
+                </header>
+    
+                <section class="weather-info">
+                    <img src="/assets/weather-url.png" alt="" class="weather-img">
+                    <div class="info-title">
+                        <h2 class="weather-temp">12&deg;C</h2>
+                        <h2>Clear sky</h2>
+                        <h2>Feel likes 0&deg;C</h2>
+                    </div>
+                    <div class="temp-info">
+                        <div class="minmax-temp">
+                            <div class="temperature-wrapper">
+                                <img src="/assets/high-temp.png" alt="" class="temperature">
+                                <div class="temp-deg">
+                                    <h4>Highest Temperature:</h4>
+                                    <h2 class="degree">4.45&deg;C</h2>
+                                </div>
+                            </div>
+                            <div class="temperature-wrapper">
+                                <img src="/assets/low-temp.png" alt="" class="temperature">
+                                <div class="temp-deg">
+                                    <h4>Lowest Temperature:</h4>
+                                    <h2 class="degree">2.10&deg;C</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <div class="grid">
+                    <section class="weather-details item1">
+                        <ul class="weather__lists">
+                            <li class="list-items">
+                                <img src="/assets/pressure.png" alt="" class="weather-details-img">
+                                <div class="item-info-wrapper">
+                                    <h4>Pressure</h4>
+                                    <h2 class="item-stats">1021 hPa</h2>
+                                </div>
+                            </li>
+                            <li class="list-items">
+                                <img src="/assets/humid.png" alt="" class="weather-details-img">
+                                <div class="item-info-wrapper">
+                                    <h4>Humidity</h4>
+                                    <h2 class="item-stats">73%</h2>
+                                </div>
+                            </li>
+                            <li class="list-items">
+                                <img src="/assets/visibility.png" alt="" class="weather-details-img">
+                                <div class="item-info-wrapper">
+                                    <h4>Visibility</h4>
+                                    <h2 class="item-stats">10,000 m</h2>
+                                </div>
+                                
+                            </li>
+                        </ul>
+                    </section>
+    
+                    <section class="weather-details item2">
+                        <ul class="weather__lists sun">
+                            <li class="list-items">
+                                <img src="/assets/sunrise.png" alt="" class="weather-details-img">
+                                <div class="item-info-wrapper">
+                                    <h4>Sunrise</h4>
+                                    <h2 class="item-stats">1021 hPa</h2>
+                                </div>
+                            </li>
+                            <li class="list-items">
+                                <img src="/assets/sunset.png" alt="" class="weather-details-img">
+                                <div class="item-info-wrapper">
+                                    <h4>Sunset</h4>
+                                    <h2 class="item-stats">1021 hPa</h2>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+    
+                    <section class="weather-details item3">
+                        <ul class="weather__lists ">
+                            <li class="list-items">
+                                <img src="/assets/windirec.png" alt="" class="weather-details-img">
+                                <div class="item-info-wrapper">
+                                    <h4>Wind Direction</h4>
+                                    <h2 class="item-stats">1021 hPa</h2>
+                                </div>
+                            </li>
+                            <li class="list-items">
+                                <img src="/assets/windspeed.png" alt="" class="weather-details-img">
+                                <div class="item-info-wrapper">
+                                    <h4>Wind Speed</h4>
+                                    <h2 class="item-stats">1021 hPa</h2>
+                                </div>
+                            </li>
+                            <li class="list-items">
+                                <img src="/assets/cloudiness.png" alt="" class="weather-details-img">
+                                <div class="item-info-wrapper">
+                                    <h4>Cloudiness</h4>
+                                    <h2 class="item-stats">1021 hPa</h2>
+                                </div>
+                            </li>
+                        </ul>
+                    </section> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
