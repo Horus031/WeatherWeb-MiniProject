@@ -15,6 +15,9 @@
             <div class="tab1">
                 <div class="search-wrapper">
                     <input type="text" name="" id="search-input" placeholder="Search for a city">
+                    <div id="dropdown" class="dropdown">
+                        
+                    </div>
                     <span class="search-icon">
                         <box-icon name='search-alt-2'></box-icon>
                     </span>
@@ -31,7 +34,7 @@
                         <span class="back-icon">
                             <box-icon name='chevron-left' type='solid' size="lg"></box-icon>
                         </span>
-                        <h1 class="country-name">London</h1>
+                        <h1 class="country-name"></h1>
                     </div>
                     <div class="time-wrapper">
                         <h2>Jan 2, 03:34pm</h2>
@@ -41,24 +44,20 @@
                 <section class="weather-info">
                     <img src="/assets/weather-url.png" alt="" class="weather-img">
                     <div class="info-title">
-                        <h2 class="weather-temp">12&deg;C</h2>
-                        <h2>Clear sky</h2>
-                        <h2>Feel likes 0&deg;C</h2>
+                        
                     </div>
                     <div class="temp-info">
                         <div class="minmax-temp">
                             <div class="temperature-wrapper">
                                 <img src="/assets/high-temp.png" alt="" class="temperature">
-                                <div class="temp-deg">
-                                    <h4>Highest Temperature:</h4>
-                                    <h2 class="degree">4.45&deg;C</h2>
+                                <div id="hightemp__wrapper" class="temp-deg">
+                                    
                                 </div>
                             </div>
                             <div class="temperature-wrapper">
                                 <img src="/assets/low-temp.png" alt="" class="temperature">
-                                <div class="temp-deg">
-                                    <h4>Lowest Temperature:</h4>
-                                    <h2 class="degree">2.10&deg;C</h2>
+                                <div id="lowtemp__wrapper" class="temp-deg">
+                                    
                                 </div>
                             </div>
                         </div>
@@ -70,23 +69,20 @@
                         <ul class="weather__lists">
                             <li class="list-items">
                                 <img src="/assets/pressure.png" alt="" class="weather-details-img">
-                                <div class="item-info-wrapper">
-                                    <h4>Pressure</h4>
-                                    <h2 class="item-stats">1021 hPa</h2>
+                                <div id="pressure__wrapper" class="item-info-wrapper">
+                                    
                                 </div>
                             </li>
                             <li class="list-items">
                                 <img src="/assets/humid.png" alt="" class="weather-details-img">
-                                <div class="item-info-wrapper">
-                                    <h4>Humidity</h4>
-                                    <h2 class="item-stats">73%</h2>
+                                <div id="humid__wrapper" class="item-info-wrapper">
+                                    
                                 </div>
                             </li>
                             <li class="list-items">
                                 <img src="/assets/visibility.png" alt="" class="weather-details-img">
-                                <div class="item-info-wrapper">
-                                    <h4>Visibility</h4>
-                                    <h2 class="item-stats">10,000 m</h2>
+                                <div id="visib__wrapper" class="item-info-wrapper">
+                                    
                                 </div>
                                 
                             </li>
@@ -97,16 +93,14 @@
                         <ul class="weather__lists sun">
                             <li class="list-items">
                                 <img src="/assets/sunrise.png" alt="" class="weather-details-img">
-                                <div class="item-info-wrapper">
-                                    <h4>Sunrise</h4>
-                                    <h2 class="item-stats">1021 hPa</h2>
+                                <div id="sunrise__wrapper" class="item-info-wrapper">
+                                    
                                 </div>
                             </li>
                             <li class="list-items">
                                 <img src="/assets/sunset.png" alt="" class="weather-details-img">
-                                <div class="item-info-wrapper">
-                                    <h4>Sunset</h4>
-                                    <h2 class="item-stats">1021 hPa</h2>
+                                <div id="sunset__wrapper" class="item-info-wrapper">
+                                    
                                 </div>
                             </li>
                         </ul>
@@ -116,23 +110,20 @@
                         <ul class="weather__lists ">
                             <li class="list-items">
                                 <img src="/assets/windirec.png" alt="" class="weather-details-img">
-                                <div class="item-info-wrapper">
-                                    <h4>Wind Direction</h4>
-                                    <h2 class="item-stats">1021 hPa</h2>
+                                <div id="windirect__wrapper" class="item-info-wrapper">
+                                    
                                 </div>
                             </li>
                             <li class="list-items">
                                 <img src="/assets/windspeed.png" alt="" class="weather-details-img">
-                                <div class="item-info-wrapper">
-                                    <h4>Wind Speed</h4>
-                                    <h2 class="item-stats">1021 hPa</h2>
+                                <div id="windspeed__wrapper" class="item-info-wrapper">
+                                    
                                 </div>
                             </li>
                             <li class="list-items">
                                 <img src="/assets/cloudiness.png" alt="" class="weather-details-img">
-                                <div class="item-info-wrapper">
-                                    <h4>Cloudiness</h4>
-                                    <h2 class="item-stats">1021 hPa</h2>
+                                <div id="cloudiness__wrapper" class="item-info-wrapper">
+                                    
                                 </div>
                             </li>
                         </ul>

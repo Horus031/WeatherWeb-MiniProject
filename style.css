@@ -34,6 +34,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    z-index: 0;
 }
 
 .tab2 {
@@ -62,28 +63,86 @@ body {
     padding: 16px;
     overflow: hidden;
     transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .search-wrapper {
     position: relative;
+    border-radius: 10px;
     width: 100%;
     display: flex;
+    z-index: 3;
+
 }
 
 #search-input {
     flex: 1;
     border: 0;
-    border-radius: 20px;
     height: 40px;
     padding: 16px;
     font-size: 2rem;
+    outline: none;
+    z-index: 2;
+
 }
+
+
 
 .search-icon {
     position: absolute;
     right: 16px;
     top: 8px;
     cursor: pointer;
+    z-index: 2;
+}
+
+#dropdown {
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 1px 8px 6px #ccc;
+    margin-top: 8px;
+    padding-top: 16px;
+    top: 30px;
+    left: 0;
+    z-index: 2;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Gray color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker gray on hover */
+}
+
+.dropdown-options {
+    cursor: pointer;
+    padding: 16px;
+    z-index: 2;
+}
+
+.dropdown-options:hover {
+    background-color: #ddd;
+    transition: all 0.3s ease;
+}
+
+#search-input:focus .dropdown {
+    transition: all 0.3s ease;
 }
 
 
