@@ -18,6 +18,7 @@ const windirectBlock = document.querySelector('#windirect__wrapper');
 const windSpeedBlock = document.querySelector('#windspeed__wrapper');
 const cloudBlock = document.querySelector('#cloudiness__wrapper');
 
+
 function start() {
     getTime(handleAndRenderTime);
 }
@@ -158,17 +159,25 @@ function handleAndRenderTime(timeData) {
         .join('');
 
     dropDownBlock.onclick = function(event) {
-    if (event.target.tagName === 'H1') {
-        const selectedCountry = event.target.dataset.country;
-        const selectedTime = formattedCountries.find(country => country.countryName === selectedCountry).localTime;
-        
-        timeBlock.innerHTML = `<h2>${selectedTime}</h2>`;
-        getWeather(handleWeather, selectedCountry);
-        
-        searchTab.style.display = 'none';
-        mainTab.style.display = 'flex';
+        if (event.target.tagName === 'H1') {
+            const selectedCountry = event.target.dataset.country;
+            const selectedTime = formattedCountries.find(country => country.countryName === selectedCountry).localTime;
+            
+            timeBlock.innerHTML = `<h2>${selectedTime}</h2>`;
+            getWeather(handleWeather, selectedCountry);
+            
+            searchTab.style.display = 'none';
+            mainTab.style.display = 'flex';
+        } 
     }
-}
+
+    searchInput.oninput = function(event) {
+        let searchValue = event.target.value;
+        const filteredCountries = uniqueCountries.filter(country => country.includes(searchValue));
+        dropDownBlock.innerHTML = filteredCountries
+            .map(country => `<h1 class="dropdown-options" data-country="${country}">${country}</h1>`)
+            .join('');
+    }
 }
 
 
