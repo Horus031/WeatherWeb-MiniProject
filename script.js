@@ -173,7 +173,7 @@ function handleAndRenderTime(timeData) {
 
     searchInput.oninput = function(event) {
         let searchValue = event.target.value;
-        const filteredCountries = uniqueCountries.filter(country => country.includes(searchValue));
+        const filteredCountries = uniqueCountries.filter(country => country.toLowerCase().includes(searchValue.toLowerCase()));
         dropDownBlock.innerHTML = filteredCountries
             .map(country => `<h1 class="dropdown-options" data-country="${country}">${country}</h1>`)
             .join('');
