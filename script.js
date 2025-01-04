@@ -33,7 +33,7 @@ function getWeather(callback, countryName) {
             return response.json();
         })
         .then(callback)
-        .catch(error => console.error('Error fetching weather data:', error));
+        .catch(error => console.error('Error fetching weather data: ', error));
 }
 
 function getTime(callback) {
@@ -172,8 +172,11 @@ function handleAndRenderTime(timeData) {
     }
 
     searchInput.oninput = function(event) {
-        let searchValue = event.target.value;
-        const filteredCountries = uniqueCountries.filter(country => country.toLowerCase().includes(searchValue.toLowerCase()));
+        let searchValue = event.target.value; // Lấy giá trị từ input
+        // Xử lý input (khoảng trắng, viết hoa)
+        let formattedValue = searchValue.trim().replace(/\s+/g, ''); 
+        const filteredCountries = uniqueCountries.filter(country => country.toLowerCase().includes(formattedValue.toLowerCase()));
+        // Render những quốc gia có điểm chung với tìm kiếm
         dropDownBlock.innerHTML = filteredCountries
             .map(country => `<h1 class="dropdown-options" data-country="${country}">${country}</h1>`)
             .join('');
